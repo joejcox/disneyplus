@@ -35,12 +35,32 @@
 }
 
 .button--large {
-  margin: 0 !important;
+  margin-left: 0 !important;
   text-align: center;
   padding: 1rem;
   width: 100%;
   max-width: 340px;
   font-size: 0.9rem;
+}
+
+.button.gradient {
+  transition: 0.2s ease-out;
+  margin: 1rem 0;
+  color: black;
+  background: linear-gradient(135deg, #7cbfce, #adeae8, #7cbfce);
+  font-weight: 700;
+  border: none;
+  width: auto;
+}
+
+.button.gradient:hover {
+  color: black;
+  background: linear-gradient(135deg, #88d2e2, #afecea, #87cfdf);
+}
+
+.button.gradient:active {
+  transform: scale(0.98);
+  background: linear-gradient(135deg, #6498a4, #91c4c2, #5f909b);
 }
 
 @media screen and (min-width: 768px) {
@@ -53,5 +73,8 @@
   .button--large {
     padding: 1.1rem;
     font-size: 1.1rem;
+  }
+  .button.block {
+    display: block;
   }
 }
