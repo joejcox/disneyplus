@@ -66,8 +66,14 @@ const Hero = ({ heroHeightHandler }) => {
 
         <div
           className={`${styles.background_image} ${styles.desktop} ${loadingBackground}`}
+          style={{
+            background: `url(${desktopImage})`,
+            backgroundSize: "100%",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "top right",
+          }}
         >
-          <img src={desktopImage} alt="Marvel tv show" />
+          {/* <img src={desktopImage} alt="Marvel tv show" /> */}
         </div>
         <div
           className={`${styles.background_image} ${styles.mobile} ${loadingBackground}`}
