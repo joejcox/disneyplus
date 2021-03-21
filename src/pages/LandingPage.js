@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import Header from "../components/PageComponents/LandingPage/Header";
 import Hero from "../components/PageComponents/LandingPage/Hero/Hero";
 import ImageTextSection from "../components/PageComponents/LandingPage/ImageTextSection/ImageTextSection";
@@ -27,6 +28,50 @@ const LandingPage = () => {
 
   return (
     <main role="main">
+      <Helmet>
+        <title>
+          Disney+ | The streaming home of Disney, Marvel, Pixar, Star Wars, Nat
+          Geo and Star.
+        </title>
+        <meta
+          name="description"
+          content="Disney+ is the streaming home of Disney, Pixar, Marvel, Star Wars, National Geographic and now Star. Star brings you a brand-new world of TV series, movies and new originals."
+        />
+        <meta
+          name="twitter:url"
+          content="https://www.disneyplus.com/en-gb/welcome"
+        />
+        <meta
+          property="og:url"
+          content="https://www.disneyplus.com/en-gb/welcome"
+        />
+        <meta
+          name="twitter:description"
+          content="Disney+ is the streaming home of Disney, Pixar, Marvel, Star Wars, National Geographic and now Star. Star brings you a brand-new world of TV series, movies and new originals."
+        />
+        <meta
+          property="og:description"
+          content="Disney+ is the streaming home of Disney, Pixar, Marvel, Star Wars, National Geographic and now Star. Star brings you a brand-new world of TV series, movies and new originals."
+        />
+        <meta
+          name="twitter:title"
+          content="Disney+ | The streaming home of Disney, Marvel, Pixar, Star Wars, Nat Geo and Star."
+        />
+        <meta
+          property="og:title"
+          content="Disney+ | The streaming home of Disney, Marvel, Pixar, Star Wars, Nat Geo and Star."
+        />
+        <meta
+          name="twitter:image"
+          content="https://cannonball-cdn.bamgrid.com/assets/originals/share-default.png"
+        />
+        <meta
+          property="og:image"
+          content="https://cannonball-cdn.bamgrid.com/assets/originals/share-default.png"
+        />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary" />
+      </Helmet>
       <Header scrolled={scrolled} />
       <Hero heroHeightHandler={getHeroHeight} />
       <ImageTextSection
