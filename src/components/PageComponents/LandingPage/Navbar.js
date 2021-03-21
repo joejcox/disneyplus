@@ -3,7 +3,6 @@ import ButtonLink from "../../Button/ButtonLink";
 import classnames from "classnames";
 
 const Navbar = ({ scrolled }) => {
-  console.log(`not scrolled down: ${!scrolled}`);
   const classes = classnames({
     [styles.nav_landing]: true,
     [styles.hide]: scrolled,
@@ -12,7 +11,7 @@ const Navbar = ({ scrolled }) => {
   return (
     <nav className={classes}>
       <div className={styles["nav_landing--right"]}>
-        <ButtonLink route="/" outline>
+        <ButtonLink outline route="/">
           LOG IN
         </ButtonLink>
       </div>

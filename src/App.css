@@ -6,10 +6,13 @@
 
 body {
   background-color: #040714;
+  scroll-behavior: smooth;
 }
 
 ul {
+  padding-left: 1rem;
   text-align: left;
+  color: rgb(165, 165, 165);
 }
 
 li {
@@ -17,8 +20,83 @@ li {
   margin: 0 0 1rem;
 }
 
+p {
+  line-height: 1.5;
+  font-size: 1rem;
+  color: rgb(165, 165, 165);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: white;
+}
+
+h1 {
+  line-height: 1.2;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+h1 span {
+  display: auto;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  color: white;
+}
+
 @media screen and (min-width: 768px) {
+  h1 {
+    line-height: 1.2;
+    font-size: 2.8rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+  }
+
+  h1 span {
+    display: block;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+    margin-bottom: 1.5rem;
+  }
+
+  h3 {
+    font-size: 2.7rem;
+  }
+
+  p,
   li {
     font-size: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  li {
+    font-size: 1.1rem;
+  }
+
+  p {
+    font-size: 1.15rem;
   }
 }

@@ -49,14 +49,18 @@ const Hero = ({ heroHeightHandler }) => {
                 £7.99 <span>/ month</span>
               </h3>
               <p>Subscription required.</p>
-              <ButtonLink large>Sign Up Now</ButtonLink>
+              <ButtonLink route="/" large>
+                Sign Up Now
+              </ButtonLink>
             </div>
             <div className={styles.plan}>
               <h3 className={styles.plan_price}>
                 £79.90 <span>/ year</span>
               </h3>
               <p>Save over 15%.* Subscription required.</p>
-              <ButtonLink large>Save on 12 Months</ButtonLink>
+              <ButtonLink route="/" large>
+                Save on 12 Months
+              </ButtonLink>
             </div>
           </div>
           <span className={styles.terms}>
@@ -72,14 +76,16 @@ const Hero = ({ heroHeightHandler }) => {
             backgroundRepeat: "no-repeat",
             backgroundPosition: "top right",
           }}
-        >
-          {/* <img src={desktopImage} alt="Marvel tv show" /> */}
-        </div>
+        ></div>
         <div
           className={`${styles.background_image} ${styles.mobile} ${loadingBackground}`}
-        >
-          <img src={mobileImage} alt="Marvel tv show" />
-        </div>
+          style={{
+            background: `url(${mobileImage})`,
+            backgroundSize: "100%",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "top center",
+          }}
+        ></div>
       </div>
       <footer className={`${styles.hero_footer} ${loadingContent}`}>
         <img

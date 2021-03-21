@@ -24,7 +24,7 @@ const ImageTextSection = ({
           {title}
           {span && <span>{span}</span>}
         </h3>
-        <p>{children}</p>
+        {children}
       </div>
     </section>
   );

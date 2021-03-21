@@ -4,7 +4,6 @@ import classnames from "classnames";
 import logo from "../../../assets/images/logo.svg";
 
 const NavbarScrolled = ({ scrolled }) => {
-  console.log(`scrolled down: ${scrolled}`);
   const classes = classnames({
     [styles.nav_landing]: true,
     [styles.hide]: !scrolled,
@@ -19,7 +18,7 @@ const NavbarScrolled = ({ scrolled }) => {
       </div>
       <div className={styles["nav_landing--right"]}>
         <ButtonLink route="/">Sign Up Now</ButtonLink>
-        <ButtonLink route="/" outline>
+        <ButtonLink outline route="/">
           Log In
         </ButtonLink>
       </div>

@@ -7,6 +7,10 @@ import starImage from "../assets/images/landingpage/starfamily.jpg";
 import greysAnatomyImage from "../assets/images/landingpage/greysanatomy.png";
 import rayaImage from "../assets/images/landingpage/raya.jpg";
 import ButtonLink from "../components/Button/ButtonLink";
+import GridSection from "../components/PageComponents/LandingPage/GridSection/GridSection";
+import SignUpSection from "../components/PageComponents/LandingPage/SignUpSection/SignUpSection";
+import { data as images } from "../components/PageComponents/LandingPage/ExclusiveImages";
+import { data as entertainmentImages } from "../components/PageComponents/LandingPage/EntertainmentImages";
 
 const LandingPage = () => {
   const [scrolled, setScrolled] = useState(0);
@@ -16,9 +20,9 @@ const LandingPage = () => {
     window.addEventListener("scroll", () => {
       if (window.scrollY <= heroHeight - 190) {
         setScrolled(0);
-        return false;
+      } else {
+        setScrolled(1);
       }
-      setScrolled(1);
     });
   }, [heroHeight]);
 
@@ -79,10 +83,12 @@ const LandingPage = () => {
         image={starImage}
         alt="STAR Disney"
       >
-        Star on Disney+ brings you more. A brand-new world of TV series, movies
-        and new originals, with thousands of hours of bigger, bolder and more
-        exciting stories than ever before. Enjoy Star as part of your Disney+
-        subscription.
+        <p>
+          Star on Disney+ brings you more. A brand-new world of TV series,
+          movies and new originals, with thousands of hours of bigger, bolder
+          and more exciting stories than ever before. Enjoy Star as part of your
+          Disney+ subscription.
+        </p>
       </ImageTextSection>
       <ImageTextSection
         title="Watch the way you want"
@@ -111,13 +117,28 @@ const LandingPage = () => {
         image={rayaImage}
         alt="Raya and the last dragon"
       >
-        See Raya and the Last Dragon before it's available to all Disney+
-        subscribers on 4 June. Watch as many times as you like with Premier
-        Access for £19.99 and your Disney+ subscription. Learn more.
-        <ButtonLink large block gradient>
-          Get premier access now
-        </ButtonLink>
+        <p>
+          See Raya and the Last Dragon before it's available to all Disney+
+          subscribers on 4 June. Watch as many times as you like with Premier
+          Access for £19.99 and your Disney+ subscription. Learn more.
+          <ButtonLink route="/" large block gradient>
+            Get premier access now
+          </ButtonLink>
+        </p>
       </ImageTextSection>
+      <GridSection title="Exclusive Disney+ Originals" images={images}>
+        Watch never-before-seen TV series, movies, shorts and more from the
+        world’s greatest storytellers – only available on Disney+.
+      </GridSection>
+      <SignUpSection />
+      <GridSection
+        title="Stream endless entertainment"
+        images={entertainmentImages}
+      >
+        Discover the best stories from Disney, Pixar, Marvel, Star Wars,
+        National Geographic – and now, Star. From hit movies, TV series and
+        timeless classics – there's something for everyone and every mood.
+      </GridSection>
     </main>
   );
 };

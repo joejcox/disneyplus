@@ -45,7 +45,8 @@
 
 .button.gradient {
   transition: 0.2s ease-out;
-  margin: 1rem 0;
+  margin: 1rem auto;
+  margin-left: auto !important;
   color: black;
   background: linear-gradient(135deg, #7cbfce, #adeae8, #7cbfce);
   font-weight: 700;
@@ -63,6 +64,10 @@
   background: linear-gradient(135deg, #6498a4, #91c4c2, #5f909b);
 }
 
+.button.block {
+  display: block;
+}
+
 @media screen and (min-width: 768px) {
   .button {
     background: rgba(0, 0, 0, 0.673);
@@ -74,7 +79,7 @@
     padding: 1.1rem;
     font-size: 1.1rem;
   }
-  .button.block {
-    display: block;
+  .button.gradient {
+    margin-left: 0 !important;
   }
 }
