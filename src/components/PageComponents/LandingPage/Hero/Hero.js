@@ -1,22 +1,39 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import logo from "../../../../assets/images/logo.svg";
 import desktopImage from "../../../../assets/images/landingpage/heroBg.jpg";
 import mobileImage from "../../../../assets/images/landingpage/heroBgMobile.jpg";
 import styles from "./Hero.module.css";
 import ButtonLink from "../../../Button/ButtonLink";
 import brandsImage from "../../../../assets/images/landingpage/footerbrands.png";
+import classnames from "classnames";
 
 const Hero = ({ heroHeightHandler }) => {
   const refEl = useRef(null);
+  const [loading, setLoading] = useState(true);
+  const [loadingBg, setLoadingBg] = useState(true);
+
+  const loadingContent = classnames({
+    [styles.novis]: loading,
+  });
+
+  const loadingBackground = classnames({
+    [styles.novis]: loadingBg,
+  });
 
   useEffect(() => {
     heroHeightHandler(refEl);
+    setTimeout(() => {
+      setLoading(false);
+    }, 400);
+    setTimeout(() => {
+      setLoadingBg(false);
+    }, 500);
   });
 
   return (
     <section className={styles.hero} ref={refEl}>
       <div className={styles.hero_body}>
-        <div className={styles.hero_content}>
+        <div className={`${styles.hero_content} ${loadingContent}`}>
           <picture className={styles.logo_image}>
             <img src={logo} alt="disney logo" />
           </picture>
@@ -47,14 +64,18 @@ const Hero = ({ heroHeightHandler }) => {
           </span>
         </div>
 
-        <div className={`${styles.background_image} ${styles.desktop}`}>
+        <div
+          className={`${styles.background_image} ${styles.desktop} ${loadingBackground}`}
+        >
           <img src={desktopImage} alt="Marvel tv show" />
         </div>
-        <div className={`${styles.background_image} ${styles.mobile}`}>
+        <div
+          className={`${styles.background_image} ${styles.mobile} ${loadingBackground}`}
+        >
           <img src={mobileImage} alt="Marvel tv show" />
         </div>
       </div>
-      <footer className={styles.hero_footer}>
+      <footer className={`${styles.hero_footer} ${loadingContent}`}>
         <img
           className={styles.brands}
           src={brandsImage}
