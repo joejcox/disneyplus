@@ -1,0 +1,195 @@
+.hero {
+  position: relative;
+  height: 100vh;
+}
+
+.hero_body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero_content {
+  width: 100%;
+  color: white;
+  text-align: center;
+  padding: 0 2rem;
+  margin-top: 350px;
+}
+
+.logo_image {
+  display: block;
+  max-width: 160px;
+  margin: 0 auto 1rem;
+}
+
+.logo_image img {
+  width: 100%;
+}
+
+.heading {
+  line-height: 1.2;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.heading span {
+  display: auto;
+}
+
+.sub_heading {
+  font-weight: 500;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.plans {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.plan {
+  flex: 1;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(251, 251, 251, 0.197);
+  margin-bottom: 1rem;
+}
+
+.plan:last-child {
+  border: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.plan_price {
+  font-size: 1.5rem;
+}
+
+.plan_price span,
+.plan p,
+.terms {
+  font-weight: 300;
+  font-size: 1rem;
+  color: rgb(202, 202, 202);
+}
+
+.plan p {
+  margin: 0 0 0.5rem;
+}
+
+.terms {
+  font-size: 0.8rem;
+}
+
+.background_image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.background_image.desktop {
+  display: none;
+}
+
+.background_image.mobile {
+  display: block;
+}
+
+.background_image img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.hero_footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0 5rem 2rem;
+  color: white;
+  font-weight: 900;
+  font-size: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brands {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .hero_body {
+    padding: 80px;
+  }
+
+  .hero_content {
+    max-width: 680px;
+    margin-top: -20px;
+    margin-right: auto;
+    text-align: left;
+    padding: 0;
+  }
+
+  .logo_image {
+    margin: 0 0 1rem 0;
+  }
+
+  .heading {
+    line-height: 1.2;
+    font-size: 2.8rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+  }
+
+  .heading span {
+    display: block;
+  }
+
+  .sub_heading {
+    font-size: 1.7rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .plans {
+    flex-direction: row;
+  }
+
+  .plan {
+    margin-right: 2rem;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border: none;
+  }
+
+  .plan_price {
+    font-size: 2rem;
+  }
+
+  .plan p {
+    margin: 0.5rem 0 1.5rem;
+  }
+
+  .brands {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .background_image.desktop {
+    display: block;
+  }
+  .background_image.mobile {
+    display: none;
+  }
+}

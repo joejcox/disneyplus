@@ -1,0 +1,45 @@
+.nav_landing {
+  transition: 0.5s ease-out;
+  position: fixed;
+  padding: 0 1rem;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  letter-spacing: 1rem;
+  z-index: 999;
+}
+
+.nav_landing.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.has_bg {
+  background-color: #090b13;
+}
+
+.nav_landing--left {
+  margin-right: auto;
+}
+
+.logo_container {
+  display: inline-block;
+  width: 80px;
+  max-height: 70px;
+  overflow: hidden;
+  margin-top: 4px;
+}
+
+.logo_container img {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .nav_landing {
+    padding: 0 2.2rem;
+  }
+}
