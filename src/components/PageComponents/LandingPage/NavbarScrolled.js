@@ -17,8 +17,8 @@ const NavbarScrolled = ({ scrolled }) => {
         </a>
       </div>
       <div className={styles["nav_landing--right"]}>
-        <ButtonLink route="/">Sign Up Now</ButtonLink>
-        <ButtonLink outline route="/">
+        <ButtonLink route="/sign-up">Sign Up Now</ButtonLink>
+        <ButtonLink outline route="/sign-in">
           Log In
         </ButtonLink>
       </div>
