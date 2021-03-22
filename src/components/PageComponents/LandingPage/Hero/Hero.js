@@ -1,5 +1,5 @@
 import { useRef, useEffect, useState } from "react";
-import logo from "../../../../assets/images/logo.svg";
+import Logo from "../../../Logo/Logo";
 import desktopImage from "../../../../assets/images/landingpage/heroBg.jpg";
 import mobileImage from "../../../../assets/images/landingpage/heroBgMobile.jpg";
 import styles from "./Hero.module.css";
@@ -34,9 +34,7 @@ const Hero = ({ heroHeightHandler }) => {
     <section className={styles.hero} ref={refEl}>
       <div className={styles.hero_body}>
         <div className={`${styles.hero_content} ${loadingContent}`}>
-          <picture className={styles.logo_image}>
-            <img src={logo} alt="disney logo" />
-          </picture>
+          <Logo />
           <h1 className={styles.heading}>
             The Falcon and <span>The Winter Soldier</span>
           </h1>

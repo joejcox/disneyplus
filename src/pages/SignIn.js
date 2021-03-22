@@ -1,5 +1,9 @@
 import { useState } from "react";
 import { auth } from "../lib/firebase";
+import Logo from "../components/Logo/Logo";
+import Button from "../components/Button/Button";
+import styles from "./SignIn.module.css";
+import { Link } from "react-router-dom";
 
 const SignIn = () => {
   const [email, setEmail] = useState("");
@@ -39,8 +43,11 @@ const SignIn = () => {
   };
 
   return (
-    <section className="sign_in">
-      <h1>Sign In</h1>
+    <section className={styles.sign_in}>
+      <Link to="/">
+        <Logo />
+      </Link>
+      <h1 className={styles.sign_in__title}>Log in with your email</h1>
       <form
         id="sign_in"
         method="POST"
@@ -48,10 +55,12 @@ const SignIn = () => {
       >
         <input
           type="text"
+          aria-label="Enter the email you'd like to use to log in to Disney Plus"
           name="email"
           onChange={(e) => handleInputChange(e)}
           placeholder="Email"
           value={email}
+          className={styles.input}
         />
         <input
           type="password"
@@ -59,8 +68,21 @@ const SignIn = () => {
           onChange={(e) => handleInputChange(e)}
           placeholder="Password"
           value={password}
+          className={styles.input}
         />
-        <button type="submit">Log In</button>
+        <Button
+          large
+          type="submit"
+          extraStyles={{
+            maxWidth: "100%",
+            padding: ".8rem",
+            fontSize: ".9rem",
+            fontWeight: "bold",
+            marginTop: "1.5rem",
+          }}
+        >
+          Continue
+        </Button>
       </form>
     </section>
   );

@@ -24,16 +24,6 @@
   margin-top: 200px;
 }
 
-.logo_image {
-  display: block;
-  max-width: 160px;
-  margin: 0 auto 1rem;
-}
-
-.logo_image img {
-  width: 100%;
-}
-
 .plans {
   display: flex;
   flex-direction: column;

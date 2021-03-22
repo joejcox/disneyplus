@@ -1,7 +1,8 @@
 import styles from "./styles.module.css";
 import ButtonLink from "../../Button/ButtonLink";
 import classnames from "classnames";
-import logo from "../../../assets/images/logo.svg";
+import Logo from "../../Logo/Logo";
+import { Link } from "react-router-dom";
 
 const NavbarScrolled = ({ scrolled }) => {
   const classes = classnames({
@@ -12,9 +13,9 @@ const NavbarScrolled = ({ scrolled }) => {
   return (
     <nav className={`${classes} ${styles.has_bg}`}>
       <div className={styles["nav_landing--left"]}>
-        <a className={styles.logo_container} href="/">
-          <img src={logo} alt="Disney+ Logo" />
-        </a>
+        <Link className={styles.logo_container} to="/">
+          <Logo />
+        </Link>
       </div>
       <div className={styles["nav_landing--right"]}>
         <ButtonLink route="/sign-up">Sign Up Now</ButtonLink>

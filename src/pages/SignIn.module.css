@@ -1,0 +1,32 @@
+.sign_in {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 400px;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sign_in__title {
+  display: block;
+  align-self: stretch;
+  font-size: 1.5rem;
+}
+
+.input {
+  backdrop-filter: blur(50px);
+  background-color: rgb(49, 52, 62);
+  border: 1px solid transparent;
+  border-radius: 5px;
+  caret-color: rgb(2, 231, 245);
+  color: rgb(249, 249, 249);
+  font-size: 0.95rem;
+  height: 48px;
+  line-height: 1.5;
+  margin: 0px;
+  outline: none;
+  padding: 0.4rem 0.8rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}

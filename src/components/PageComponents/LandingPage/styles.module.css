@@ -27,15 +27,11 @@
 }
 
 .logo_container {
-  display: inline-block;
+  display: block;
   width: 80px;
   max-height: 70px;
   overflow: hidden;
-  margin-top: 4px;
-}
-
-.logo_container img {
-  width: 100%;
+  margin-top: 1rem;
 }
 
 @media screen and (min-width: 768px) {
