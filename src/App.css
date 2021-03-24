@@ -100,3 +100,10 @@ h3 {
     font-size: 1.15rem;
   }
 }
+
+@media screen and (min-width: 1439px) {
+  .landingSection {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+}

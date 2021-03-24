@@ -10,11 +10,6 @@
   grid-gap: 1.5rem;
 }
 
-.grid_item img {
-  object-fit: cover;
-  width: 100%;
-}
-
 .grid_section p {
   margin: 1rem 0;
 }

@@ -15,7 +15,6 @@
 }
 
 .input {
-  backdrop-filter: blur(50px);
   background-color: rgb(49, 52, 62);
   border: 1px solid transparent;
   border-radius: 5px;

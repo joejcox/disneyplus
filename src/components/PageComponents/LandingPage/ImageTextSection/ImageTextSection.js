@@ -10,6 +10,7 @@ const ImageTextSection = ({
   span,
 }) => {
   const alignClass = classnames({
+    landingSection: true,
     [styles.image_text]: true,
     [styles.image_right]: imageRight,
   });
